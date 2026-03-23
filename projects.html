@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Supply for Real Estate Development - معرض الأعمال وجميع المشاريع">
-    <title>معرض الأعمال | Supply For Real Estate</title>
+    <meta name="description" content="Supply for Real Estate Development - الرائدة في قطاع المقاولات، التوريدات العامة، والتطوير العقاري" data-tr="site_description">
+    <title data-tr="site_title">Supply For Real Estate Development</title>
     <link rel="icon" href="logo.png" type="image/png">
     <!-- Google Fonts: Tajawal -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,12 +13,12 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.15">
 </head>
 <body>
     
     <!-- Navbar Section -->
-    <nav class="navbar scrolled navbar-page" id="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container navbar-container">
             <div class="logo">
                 <a href="index.html">
@@ -27,12 +27,20 @@
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html#home">الرئيسية</a></li>
-                <li><a href="index.html#about">من نحن</a></li>
-                <li><a href="index.html#services">خدماتنا</a></li>
-                <li><a href="projects.html" class="active">أعمالنا</a></li>
-                <li><a href="#contact">تواصل معنا</a></li>
+                <li><a href="index.html#home" data-tr="home">الرئيسية</a></li>
+                <li><a href="index.html#about" data-tr="about">من نحن</a></li>
+                <li><a href="index.html#services" data-tr="services">خدماتنا</a></li>
+                <li><a href="projects.html" class="active" data-tr="projects">معرض إنجازاتنا</a></li>
+                <li><a href="index.html#contact" data-tr="contact">تواصل معنا</a></li>
             </ul>
+            <div class="nav-controls">
+                <div class="lang-switch" id="lang-switch" title="تغيير اللغة / Change Language">
+                    <i class="fas fa-globe"></i> <span id="lang-text">EN</span>
+                </div>
+                <div class="theme-switch" id="theme-switch" title="الوضع الليلي / Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
             <div class="hamburger-menu" id="hamburger-menu">
                 <i class="fas fa-bars"></i>
             </div>
@@ -40,11 +48,10 @@
     </nav>
 
     <!-- Page Header Section -->
-    <header class="page-header page-header-spaced">
-        <div class="header-overlay"></div>
-        <div class="container text-center page-header-content">
-            <h1 data-animation="fade-up">معرض جميع المشاريع</h1>
-            <p data-animation="fade-up" data-delay="0.2s">سجل حافل بالإنجازات والتحف المعمارية المتميزة</p>
+    <header class="page-header">
+        <div class="container text-center" data-animation="fade-up">
+            <h1 data-tr="page_proj_title">معرض إنجازاتنا</h1>
+            <p data-tr="page_proj_desc">سجل حافل بالإنجازات والتحف المعمارية المتميزة</p>
         </div>
     </header>
 
@@ -57,56 +64,63 @@
                 <div class="expanding-row">
                     <!-- Card 1 -->
                     <div class="expand-card active">
-                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="منتجع بلو هورايزون">
+                        <img src="naya/naya-1.jpeg" alt="فنادق نايا">
                         <div class="expand-content">
-                            <span class="project-badge">سياحي</span>
-                            <h3>منتجع بلو هورايزون</h3>
+                            <span class="project-badge" data-tr="proj1_badge">فندقي</span>
+                            <h3 data-tr="proj1_title">فنادق نايا</h3>
                             <div class="expand-details">
-                                <p>منتجع فاخر يطل على ساحل البحر الأحمر، مجهز بأحدث وسائل الراحة العالمية والتشطيبات الراقية ليعكس الفخامة في كل زاوية.</p>
+                                <p data-tr="pcard1_desc">مشروع فندقي متكامل يعكس قمة الرفاهية في التشطيبات والديكورات الداخلية العصرية.</p>
+                                <button class="view-project-details" data-project-id="proj1"><span data-tr="view_details_full">التفاصيل بالكامل</span> <i class="fas fa-arrow-left"></i></button>
                             </div>
                         </div>
                     </div>
                     <!-- Card 2 -->
                     <div class="expand-card">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="المركز المالي الإداري">
+                        <img src="hb-shop/صورة من hb shop بعد التشطيب.jpeg" alt="أعمال تشطيب HB Shop">
                         <div class="expand-content">
-                            <span class="project-badge">إداري</span>
-                            <h3>المركز المالي الإداري</h3>
+                            <span class="project-badge" data-tr="proj2_badge">تجاري</span>
+                            <h3 data-tr="proj2_title">أعمال تشطيب HB Shop</h3>
                             <div class="expand-details">
-                                <p>مبنى إداري ذكي يعتمد على أحدث تقنيات البناء المستدام لتوفير بيئة عمل عصرية للشركات العالمية في قلب العاصمة.</p>
+                                <p data-tr="pcard2_desc">أعمال تشطيب ميكانيكا وكهرباء متكاملة لمحل HB Shop في مكسيم مول.</p>
+                                <button class="view-project-details" data-project-id="proj2"><span data-tr="view_details_full">التفاصيل بالكامل</span> <i class="fas fa-arrow-left"></i></button>
                             </div>
                         </div>
                     </div>
                     <!-- Card 3 -->
                     <div class="expand-card">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="سكاي لاين تاورز">
+                        <img src="savito-project/after-1.jpeg" alt="بناء وتطوير واجهات سافيتو">
                         <div class="expand-content">
-                            <span class="project-badge">أبراج سكنية</span>
-                            <h3>سكاي لاين تاورز</h3>
+                            <span class="project-badge" data-tr="proj3_badge">تطوير عمراني</span>
+                            <h3 data-tr="proj3_title">بناء وتطوير واجهات سافيتو</h3>
                             <div class="expand-details">
-                                <p>أبراج سكنية شاهقة مصممة لتوفر إطلالات بانورامية مذهلة، مع مرافق متكاملة تضمن الرفاهية الكاملة للسكان.</p>
+                                <p data-tr="pcard3_desc">تنفيذ بناء وتطوير واجهات خارجية متكاملة باستخدام مواد سافيتو التي تضمن عمراً افتراضياً طويلاً وتمنح المبنى مظهراً معمارياً راقياً وفخماً.</p>
+                                <button class="view-project-details" data-project-id="proj3"><span data-tr="view_details_full">التفاصيل بالكامل</span> <i class="fas fa-arrow-left"></i></button>
                             </div>
                         </div>
                     </div>
                     <!-- Card 4 -->
                     <div class="expand-card">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="فيلا روز الياسمين">
+                        <video autoplay loop muted class="video-thumbnail">
+                            <source src="civil-registry/civil-registry-vid.webm" type="video/webm">
+                        </video>
                         <div class="expand-content">
-                            <span class="project-badge">سكني خاص</span>
-                            <h3>فيلا روز الياسمين</h3>
+                            <span class="project-badge" data-tr="pcard4_badge">مؤسسات حكومية</span>
+                            <h3 data-tr="pcard4_title">قاعة الأحوال المدنية</h3>
                             <div class="expand-details">
-                                <p>فيلا بتصميم كلاسيكي حديث، تضم حدائق ومسبح خاص ومساحات مفتوحة تلبي أعلى معايير الخصوصية والفخامة.</p>
+                                <p data-tr="pcard4_desc">مشروع متكامل لتشطيب وتجهيز وفرش قاعة الأحوال المدنية وفق أعلى المعايير القياسية لتوفير بيئة عمل متطورة وخدمات مريحة للمواطنين.</p>
+                                <button class="view-project-details" data-project-id="proj4"><span data-tr="view_details_full">التفاصيل بالكامل</span> <i class="fas fa-arrow-left"></i></button>
                             </div>
                         </div>
                     </div>
                     <!-- Card 5 -->
                     <div class="expand-card">
-                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" alt="مول النخبة">
+                        <img src="eastshire-project/east-1.jpeg" alt="واجهات إيست شاير">
                         <div class="expand-content">
-                            <span class="project-badge">تجاري</span>
-                            <h3>مول النخبة</h3>
+                            <span class="project-badge" data-tr="pcard5_badge">تطوير عمراني</span>
+                            <h3 data-tr="pcard5_title">واجهات إيست شاير</h3>
                             <div class="expand-details">
-                                <p>واجهة تجارية رائدة توفر تجربة تسوق فريدة ومناطق ترفيهية بتصميم معماري يعتمد على الواجهات الزجاجية العملاقة.</p>
+                                <p data-tr="pcard5_desc">تشطيب وعزل الواجهات الخارجية لكمبوند إيست شاير (القمزي للتطوير) باستخدام تقنيات جلاس روك للعزل الحراري والمحارة.</p>
+                                <button class="view-project-details" data-project-id="proj5"><span data-tr="view_details_full">التفاصيل بالكامل</span> <i class="fas fa-arrow-left"></i></button>
                             </div>
                         </div>
                     </div>
@@ -116,56 +130,41 @@
                 <div class="expanding-row">
                     <!-- Card 6 -->
                     <div class="expand-card">
-                        <img src="https://images.unsplash.com/photo-1542314831-c6a4d14effda?w=800&q=80" alt="أكاديمية العقول">
+                        <video autoplay loop muted class="video-thumbnail rotate-fixed-90">
+                            <source src="abstract-project/abstract-vid.webm" type="video/webm">
+                        </video>
                         <div class="expand-content">
-                            <span class="project-badge">تعليمي</span>
-                            <h3>أكاديمية العقول</h3>
+                            <span class="project-badge" data-tr="pcard6_badge">تجاري</span>
+                            <h3 data-tr="pcard6_title">محل Abstract</h3>
                             <div class="expand-details">
-                                <p>تنفيذ متكامل لمركز تعليمي حديث مجهز بتقنيات التعلم الذكية وملاعب رياضية متطورة تخدم آلاف الطلاب.</p>
+                                <p data-tr="pcard6_desc">تشطيب وتسليم مفتاح لمحل Abstract بأرقى الديكورات المبتكرة والأنظمة المتكاملة داخل مكسيم مول.</p>
+                                <button class="view-project-details" data-project-id="proj6"><span data-tr="view_details_full">التفاصيل بالكامل</span> <i class="fas fa-arrow-left"></i></button>
                             </div>
                         </div>
                     </div>
-                    <!-- Card 7 -->
+                    <!-- Card 7 (Eastshire Glassrock) -->
                     <div class="expand-card">
-                        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&q=80" alt="مجمع العيادات الطبي">
+                        <img src="eastshire-glassrock/eastshire-insulation-1.jpeg" alt="واجهات إيست شاير">
                         <div class="expand-content">
-                            <span class="project-badge">رعاية صحية</span>
-                            <h3>مجمع العيادات الطبي</h3>
+                            <span class="project-badge" data-tr="pcard7_badge">تطوير عمراني</span>
+                            <h3 data-tr="pcard7_title">واجهات كمبوند إيست شاير</h3>
                             <div class="expand-details">
-                                <p>مجمع طبي بمعايير عالمية تم تأسيسه بأفضل التوريدات الطبية والمواد المضادة للبكتيريا لضمان سلامة المرضى.</p>
+                                <p data-tr="pcard7_desc">أعمال العزل الحراري للواجهات باستخدام مواد شركة جلاس روك في كمبوند إيست شاير التابع لشركة القمزي.</p>
+                                <button class="view-project-details" data-project-id="proj7"><span data-tr="view_details_full">التفاصيل بالكامل</span> <i class="fas fa-arrow-left"></i></button>
                             </div>
                         </div>
                     </div>
-                    <!-- Card 8 -->
+                    <!-- Card 8 (Maxim Classic Museum) -->
                     <div class="expand-card">
-                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80" alt="تطوير قرية الندى">
+                        <video autoplay loop muted class="video-thumbnail rotate-fixed-90">
+                            <source src="متحف العربيات/maxim-classic/after.webm" type="video/webm">
+                        </video>
                         <div class="expand-content">
-                            <span class="project-badge">تطوير عمراني</span>
-                            <h3>تطوير قرية الندى</h3>
+                            <span class="project-badge" data-tr="pcard8_badge">متاحف فاخرة</span>
+                            <h3 data-tr="pcard8_title">متحف العربيات Maxim Classic</h3>
                             <div class="expand-details">
-                                <p>تأهيل البنية التحتية والمرافق العامة وإنشاء مجمعات خدمية متطورة لتقديم خدمات أفضل لآلاف المواطنين.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 9 -->
-                    <div class="expand-card">
-                        <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800&q=80" alt="مشروع الأندلس السكني">
-                        <div class="expand-content">
-                            <span class="project-badge">كمبوند</span>
-                            <h3>كمبوند الأندلس السكني</h3>
-                            <div class="expand-details">
-                                <p>مشروع كمبوند مغلق يتميز بالمساحات الخضراء الشاسعة والاستقلالية في بيئة سكنية تحاكي المنتجعات.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 10 -->
-                    <div class="expand-card">
-                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="قصر السفارات">
-                        <div class="expand-content">
-                            <span class="project-badge">فاخر جداً</span>
-                            <h3>قصر السفارات</h3>
-                            <div class="expand-details">
-                                <p>عمل إبداعي مذهل يدمج بين العمارة الشرقية الأصيلة والرفاهية الغربية في واحد من أفخم القصور بالعاصمة.</p>
+                                <p data-tr="pcard8_desc">أعمال تشطيب متكاملة لمتحف السيارات الكلاسيكية تشمل الإضاءة المعمارية والديكورات الفاخرة.</p>
+                                <button class="view-project-details" data-project-id="proj8"><span data-tr="view_details_full">التفاصيل بالكامل</span> <i class="fas fa-arrow-left"></i></button>
                             </div>
                         </div>
                     </div>
@@ -175,15 +174,27 @@
         </div>
     </section>
 
+    <!-- Dynamic Full-Screen Project Modal -->
+    <div class="project-modal-wrapper" id="projectModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content-container">
+            <button class="close-modal-btn" aria-label="Close Modal"><i class="fas fa-times"></i></button>
+            <div class="modal-body scrollable">
+                <!-- Data will be injected here via JavaScript -->
+                <div id="modal-dynamic-content"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer Section -->
-    <footer class="footer" id="contact">
+    <footer class="footer">
         <div class="container footer-container">
-            <div class="footer-info">
+            <div class="footer-info" data-animation="fade-up">
                 <div class="footer-logo">
                     <img src="logo.png" alt="Supply Footer Logo" class="footer-logo-img">
                     <h3>Supply</h3>
                 </div>
-                <p>صرح رائد في البناء، التوريدات العامة، والتطوير العقاري. نبني الثقة قبل أن نبني المشاريع.</p>
+                <p data-tr="foot_desc">صرح رائد في البناء، التوريدات العامة، والتطوير العقاري. نبني الثقة قبل أن نبني المشاريع.</p>
                 <div class="social-icons">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -192,39 +203,42 @@
                 </div>
             </div>
             
-            <div class="footer-links">
-                <h4>روابط سريعة</h4>
+            <div class="footer-links" data-animation="fade-up" data-delay="0.1s">
+                <h4 data-tr="foot_links">روابط سريعة</h4>
                 <ul>
-                    <li><a href="index.html#home">الرئيسية</a></li>
-                    <li><a href="index.html#about">من نحن</a></li>
-                    <li><a href="index.html#services">خدماتنا</a></li>
-                    <li><a href="projects.html">أعمالنا</a></li>
+                    <li><a href="index.html#home" data-tr="home">الرئيسية</a></li>
+                    <li><a href="index.html#about" data-tr="about">من نحن</a></li>
+                    <li><a href="index.html#services" data-tr="services">خدماتنا</a></li>
+                    <li><a href="projects.html" data-tr="projects">أعمالنا</a></li>
                 </ul>
             </div>
             
-            <div class="footer-contact">
-                <h4>معلومات التواصل</h4>
+            <div class="footer-contact" data-animation="fade-up" data-delay="0.2s">
+                <h4 data-tr="foot_info">معلومات التواصل</h4>
                 <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</li>
-                    <li><i class="fas fa-phone-alt"></i> +20 123 456 7890</li>
-                    <li><i class="fas fa-envelope"></i> info@supply-realestate.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span data-tr="cont_addr_desc">8 شارع شريف سامي - عبدالجواد سالم - الحي الثامن - مدينة نصر - القاهرة</span></li>
+                    <li><i class="fas fa-phone-alt"></i> <span dir="ltr">01111666227</span></li>
+                    <li><i class="fas fa-envelope"></i> <span>info@supply-realestate.com</span></li>
                 </ul>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2026 جميع الحقوق محفوظة لشركة Supply For Real Estate Development.</p>
+            <p data-tr="foot_copy">&copy; 2026 جميع الحقوق محفوظة لشركة Supply For Real Estate Development.</p>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/201234567890" class="floating-wa" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر الواتساب">
+    <a href="https://wa.me/201111666227" class="floating-wa" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر الواتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Scripts -->
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="script.js"></script>
+    <script src="projects-data.js?v=1.17"></script>
+    <script src="translations.js?v=1.8"></script>
+    <script src="script.js?v=1.6"></script>
     <!-- Expanding Cards Script -->
     <script>
         $(document).ready(function() {
