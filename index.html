@@ -14,7 +14,7 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=1.15">
+    <link rel="stylesheet" href="style.css?v=1.16">
 </head>
 <body>
     
@@ -224,28 +224,29 @@
 
                 <!-- Form Area -->
                 <div class="contact-form-area" data-animation="fade-right">
-                    <form class="contact-form" onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.');">
+                    <form class="contact-form" id="contactForm" method="POST">
                         <div class="form-row">
                             <div class="input-group">
                                 <label for="name" data-tr="form_name">الاسم الكامل</label>
-                                <input type="text" id="name" placeholder="أدخل اسمك" data-tr-ph="form_name_ph" required>
+                                <input type="text" id="name" name="name" placeholder="أدخل اسمك" data-tr-ph="form_name_ph" required>
                             </div>
                             <div class="input-group">
                                 <label for="phone" data-tr="form_phone">رقم الهاتف</label>
-                                <input type="tel" id="phone" placeholder="أدخل رقمك" data-tr-ph="form_phone_ph" required>
+                                <input type="tel" id="phone" name="phone" placeholder="أدخل رقمك" data-tr-ph="form_phone_ph" required>
                             </div>
                         </div>
                         <div class="input-group">
                             <label for="email" data-tr="form_email">البريد الإلكتروني</label>
-                            <input type="email" id="email" placeholder="example@domain.com" required>
+                            <input type="email" id="email" name="email" placeholder="example@domain.com" required>
                         </div>
                         <div class="input-group">
                             <label for="message" data-tr="form_msg">الرسالة</label>
-                            <textarea id="message" rows="5" placeholder="اكتب رسالتك تفصيلاً هنا..." data-tr-ph="form_msg_ph" required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="اكتب رسالتك تفصيلاً هنا..." data-tr-ph="form_msg_ph" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary submit-btn">
+                        <button type="submit" id="submitBtn" class="btn btn-primary submit-btn">
                             <span data-tr="form_submit">إرسال الرسالة</span> <i class="fas fa-paper-plane"></i>
                         </button>
+                        <div id="formStatus"></div>
                     </form>
                 </div>
             </div>
@@ -305,6 +306,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="projects-data.js?v=1.17"></script>
     <script src="translations.js?v=1.8"></script>
-    <script src="script.js?v=1.6"></script>
+    <script src="script.js?v=1.7"></script>
 </body>
 </html>

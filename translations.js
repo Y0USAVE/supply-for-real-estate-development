@@ -70,6 +70,10 @@ const translations = {
         "form_msg": "الرسالة",
         "form_msg_ph": "اكتب رسالتك تفصيلاً هنا...",
         "form_submit": "إرسال الرسالة",
+        "form_sending": "جاري الإرسال...",
+        "form_success": "✅ تم إرسال رسالتك بنجاح، سنتواصل معك قريباً!",
+        "form_error": "❌ حدث خطأ أثناء الإرسال، برجاء المحاولة مرة أخرى.",
+        "form_net_error": "❌ حدث مشكلة في الاتصال بالإنترنت، تأكد من الشبكة.",
         
         // Footer Features
         "foot_desc": "صرح رائد في البناء، التوريدات العامة، والتطوير العقاري. نبني الثقة قبل أن نبني المشاريع.",
@@ -169,7 +173,11 @@ const translations = {
         "form_msg": "Message",
         "form_msg_ph": "Write your detailed message here...",
         "form_submit": "Send Message",
-
+        "form_sending": "Sending...",
+        "form_success": "✅ Your message has been sent successfully. We will contact you soon!",
+        "form_error": "❌ An error occurred while sending. Please try again.",
+        "form_net_error": "❌ A network error occurred. Please check your connection.",
+        
         // Footer Features
         "foot_desc": "A leading edifice in construction, general supplies, and real estate development. We build trust before we build projects.",
         "foot_links": "Quick Links",

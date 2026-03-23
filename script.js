@@ -398,4 +398,50 @@ $(document).ready(function () {
       $wrapper.find(".ba-slider-button").css("left", `${val}%`);
   });
 
+  // ==========================================================================
+  // 9. Contact Form (Formspree Integration)
+  // ==========================================================================
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+      contactForm.addEventListener("submit", async function(event) {
+          event.preventDefault(); 
+          const form = event.target;
+          const data = new FormData(form);
+          const statusText = document.getElementById("formStatus");
+          const submitBtn = document.getElementById("submitBtn");
+
+          const currentLangEl = document.querySelector('html').getAttribute('lang') || 'ar';
+          const trStatus = translations[currentLangEl];
+
+          submitBtn.innerHTML = trStatus['form_sending'];
+          submitBtn.disabled = true;
+
+          try {
+              const response = await fetch("https://formspree.io/f/xaqpreew", {
+                  method: form.method || "POST",
+                  body: data,
+                  headers: { 'Accept': 'application/json' }
+              });
+
+              if (response.ok) {
+                  statusText.innerHTML = trStatus['form_success'];
+                  statusText.style.color = "#38A845"; 
+                  statusText.style.display = "block";
+                  form.reset(); 
+              } else {
+                  statusText.innerHTML = trStatus['form_error'];
+                  statusText.style.color = "red";
+                  statusText.style.display = "block";
+              }
+          } catch (error) {
+              statusText.innerHTML = trStatus['form_net_error'];
+              statusText.style.color = "red";
+              statusText.style.display = "block";
+          }
+
+          submitBtn.innerHTML = `<span>${trStatus['form_submit']}</span> <i class="fas fa-paper-plane"></i>`;
+          submitBtn.disabled = false;
+      });
+  }
+
 });

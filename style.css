@@ -1706,3 +1706,11 @@ html[dir="ltr"] .close-modal-btn {
         column-count: 1;
     }
 }
+
+/* Form Status Message */
+#formStatus {
+    display: none;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
